@@ -7,7 +7,7 @@ function setStatus(message) {
 };
 
 function refreshBalance() {
-  var meta = MetaCoin.deployed();
+  var cShopFront = ContractShopFront.deployed();
 
   meta.getBalance.call(account, {from: account}).then(function(value) {
     var balance_element = document.getElementById("balance");
